@@ -1,0 +1,345 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Festa da Penha</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f6f3;
+      color: #1f1f1f;
+    }
+    .section-wrapper {
+      scroll-margin-top: 120px;
+    }
+    .nav-link.active {
+      color: #d9480f;
+    }
+    .nav-duplicate {
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <header class="bg-white/90 backdrop-blur shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-5">
+      <div>
+        <p class="text-xs uppercase tracking-widest text-amber-600">Blog Cultural</p>
+        <h1 class="text-2xl font-bold text-amber-900">Festa da Penha</h1>
+      </div>
+      <button id="menuToggle" class="sm:hidden text-amber-900 border border-amber-900 px-3 py-1 rounded">Menu</button>
+      <nav id="mainNav" class="hidden sm:flex gap-6 text-sm font-semibold text-gray-700">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#historia" class="nav-link">História Viva</a>
+        <a href="#cultura" class="nav-link">Expressões Culturais</a>
+        <a href="#fe" class="nav-link">Fé & Romaria</a>
+        <a href="#contatos" class="nav-link">Contatos</a>
+      </nav>
+    </div>
+    <nav id="mobileNav" class="sm:hidden hidden flex flex-col gap-3 pb-4 px-5 text-sm font-semibold text-gray-700">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#historia" class="nav-link">História Viva</a>
+      <a href="#cultura" class="nav-link">Expressões Culturais</a>
+      <a href="#fe" class="nav-link">Fé & Romaria</a>
+      <a href="#contatos" class="nav-link">Contatos</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-5 py-16 space-y-20">
+    <section id="home" class="section-wrapper space-y-10">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-widest text-amber-600">Boas-vindas</p>
+          <h2 class="text-4xl font-extrabold text-amber-900 mb-4">Seu guia imersivo sobre a Festa da Penha</h2>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Este blog reúne histórias, tradições religiosas, expressões artísticas e experiências gastronômicas que tornam a Festa da Penha um dos maiores eventos religiosos do Brasil. Explore nossos destaques para descobrir a origem secular da celebração, as manifestações culturais de rua, o simbolismo das romarias e os sabores que aquecem o Convento da Penha e arredores.
+          </p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-6 space-y-4">
+          <h3 class="text-xl font-semibold text-amber-900">Conteúdos de destaque</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li>História Viva – a linha do tempo da devoção capixaba</li>
+            <li>Expressões Culturais – música, artesanato e cortejos</li>
+            <li>Fé & Romaria – o simbolismo das procissões e novenas</li>
+            <li>Sabores da Penha – a culinária típica e itinerários gastronômicos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <a href="#historia" class="block bg-white rounded-2xl overflow-hidden shadow hover:-translate-y-1 transition group">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" alt="Arquivos históricos" class="h-40 w-full object-cover group-hover:brightness-110">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">História Viva</h4>
+            <p class="text-sm text-gray-600">Conheça marcos, personagens e lendas da festa.</p>
+          </div>
+        </a>
+        <a href="#cultura" class="block bg-white rounded-2xl overflow-hidden shadow hover:-translate-y-1 transition group">
+          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=600&q=80" alt="Batuque cultural" class="h-40 w-full object-cover group-hover:brightness-110">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Expressões Culturais</h4>
+            <p class="text-sm text-gray-600">Bandas marianas, dança e cores das ruas.</p>
+          </div>
+        </a>
+        <a href="#fe" class="block bg-white rounded-2xl overflow-hidden shadow hover:-translate-y-1 transition group">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Velas acesas" class="h-40 w-full object-cover group-hover:brightness-110">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Fé & Romaria</h4>
+            <p class="text-sm text-gray-600">Rituais, devoções e percursos da peregrinação.</p>
+          </div>
+        </a>
+        <a href="#gastronomia" class="block bg-white rounded-2xl overflow-hidden shadow hover:-translate-y-1 transition group">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Prato típico" class="h-40 w-full object-cover group-hover:brightness-110">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Sabores da Penha</h4>
+            <p class="text-sm text-gray-600">Quitutes, panelas de barro e cafés coloniais.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="nav-duplicate">
+        <nav class="flex flex-wrap gap-4 text-sm font-semibold text-gray-700">
+          <a href="#home">Home</a>
+          <a href="#historia">História Viva</a>
+          <a href="#cultura">Expressões Culturais</a>
+          <a href="#fe">Fé & Romaria</a>
+          <a href="#contatos">Contatos</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="historia" class="section-wrapper space-y-8">
+      <div class="flex items-center gap-4">
+        <div class="h-1 w-16 bg-amber-600"></div>
+        <p class="uppercase tracking-[0.3em] text-xs text-amber-600">Página 2</p>
+      </div>
+      <h2 class="text-3xl font-bold text-amber-900">História Viva</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        A Festa da Penha surgiu no século XVI com a devoção à Nossa Senhora da Penha, trazida pelos colonizadores portugueses. O Convento, erguido no alto do morro em Vila Velha, tornou-se símbolo da fé capixaba. Ao longo dos séculos, a festa incorporou elementos da cultura indígena, africana e luso-brasileira, transformando-se em patrimônio imaterial do Espírito Santo.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-xl shadow p-5 space-y-3">
+          <h3 class="text-xl font-semibold text-amber-900">Linha do tempo</h3>
+          <p class="text-gray-700">Do eremitério de Frei Pedro Palácios às multidões contemporâneas, conheça marcos de cada século.</p>
+        </article>
+        <article class="bg-white rounded-xl shadow p-5 space-y-3">
+          <h3 class="text-xl font-semibold text-amber-900">Patrimônio</h3>
+          <p class="text-gray-700">O conjunto arquitetônico do Convento e o registro como Bem Cultural pelo IPHAN.</p>
+        </article>
+        <article class="bg-white rounded-xl shadow p-5 space-y-3">
+          <h3 class="text-xl font-semibold text-amber-900">Personagens</h3>
+          <p class="text-gray-700">Relatos de romeiros, irmandades e músicos que mantêm viva a tradição.</p>
+        </article>
+      </div>
+      <div class="nav-duplicate">
+        <nav class="flex flex-wrap gap-4 text-sm font-semibold text-gray-700">
+          <a href="#home">Home</a>
+          <a href="#historia">História Viva</a>
+          <a href="#cultura">Expressões Culturais</a>
+          <a href="#fe">Fé & Romaria</a>
+          <a href="#contatos">Contatos</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="cultura" class="section-wrapper space-y-8">
+      <div class="flex items-center gap-4">
+        <div class="h-1 w-16 bg-amber-600"></div>
+        <p class="uppercase tracking-[0.3em] text-xs text-amber-600">Página 3</p>
+      </div>
+      <h2 class="text-3xl font-bold text-amber-900">Expressões Culturais</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Quando o sino do Convento ecoa, a cidade se transforma em palco. Bandas marianas percorrem as ruas, grupos de congo puxam tambores ancestrais, artesãos esculpem santos em madeira e rendeiras exibem toalhas coloridas. Esta página reúne os movimentos artísticos que cercam a Festa da Penha.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-xl shadow p-5 space-y-3">
+          <h3 class="text-xl font-semibold text-amber-900">Música de Romaria</h3>
+          <p class="text-gray-700">Corais, ministérios de música e bandas de congo se revezam em cortejos sonoros.</p>
+        </article>
+        <article class="bg-white rounded-xl shadow p-5 space-y-3">
+          <h3 class="text-xl font-semibold text-amber-900">Artesanato de Fé</h3>
+          <p class="text-gray-700">Esculturas em barro, cordéis ilustrados e mantos bordados por artesãs locais.</p>
+        </article>
+        <article class="bg-white rounded-xl shadow p-5 space-y-3">
+          <h3 class="text-xl font-semibold text-amber-900">Cortejos Performáticos</h3>
+          <p class="text-gray-700">Companhias de dança e teatro de rua contam milagres em coreografias vibrantes.</p>
+        </article>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 space-y-3">
+        <h3 class="text-xl font-semibold text-amber-900">Roteiro sensorial</h3>
+        <p class="text-gray-700">Siga nosso roteiro para vivenciar oficinas de pandeiro, visitas aos ateliês do Sítio Histórico e apresentações noturnas à luz de velas. Cada parada inclui mapa, horários e entrevistas com mestres da cultura popular.</p>
+      </div>
+      <div class="nav-duplicate">
+        <nav class="flex flex-wrap gap-4 text-sm font-semibold text-gray-700">
+          <a href="#home">Home</a>
+          <a href="#historia">História Viva</a>
+          <a href="#cultura">Expressões Culturais</a>
+          <a href="#fe">Fé & Romaria</a>
+          <a href="#contatos">Contatos</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="fe" class="section-wrapper space-y-8">
+      <div class="flex items-center gap-4">
+        <div class="h-1 w-16 bg-amber-600"></div>
+        <p class="uppercase tracking-[0.3em] text-xs text-amber-600">Página 4</p>
+      </div>
+      <h2 class="text-3xl font-bold text-amber-900">Fé & Romaria</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        A romaria da Penha é um mergulho na espiritualidade popular. Grupos caminham desde diferentes municípios, carregando estandartes e rezando o terço. Na chegada, o toque dos sinos anuncia a acolhida dos peregrinos.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-xl shadow p-5 space-y-3">
+          <h3 class="text-xl font-semibold text-amber-900">Percursos clássicos</h3>
+          <p class="text-gray-700">Itinerários de Vitória, Cariacica e Guarapari com pontos de apoio.</p>
+        </article>
+        <article class="bg-white rounded-xl shadow p-5 space-y-3">
+          <h3 class="text-xl font-semibold text-amber-900">Símbolos</h3>
+          <p class="text-gray-700">Mantos, velas, fitas e promessas compartilhadas entre devotos.</p>
+        </article>
+        <article class="bg-white rounded-xl shadow p-5 space-y-3">
+          <h3 class="text-xl font-semibold text-amber-900">Testemunhos</h3>
+          <p class="text-gray-700">Depoimentos em áudio e texto disponíveis para download.</p>
+        </article>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 space-y-4">
+        <h3 class="text-xl font-semibold text-amber-900">Tradições de fé</h3>
+        <p class="text-gray-700">A cada amanhecer, centenas sobem os 365 degraus do convento em silêncio, agradecendo graças recebidas. A benção das velas e a consagração das famílias encerram o ciclo celebrativo.</p>
+      </div>
+      <div class="nav-duplicate">
+        <nav class="flex flex-wrap gap-4 text-sm font-semibold text-gray-700">
+          <a href="#home">Home</a>
+          <a href="#historia">História Viva</a>
+          <a href="#cultura">Expressões Culturais</a>
+          <a href="#fe">Fé & Romaria</a>
+          <a href="#contatos">Contatos</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="gastronomia" class="section-wrapper space-y-8">
+      <div class="flex items-center gap-4">
+        <div class="h-1 w-16 bg-amber-600"></div>
+        <p class="uppercase tracking-[0.3em] text-xs text-amber-600">Página 5</p>
+      </div>
+      <h2 class="text-3xl font-bold text-amber-900">Sabores da Penha</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Enquanto a fé aquece o coração, a gastronomia típica aquece o corpo. Restaurantes e barraquinhas oferecem moqueca capixaba, torta de coco, bolinho de aipim e cafés coloniais com vista privilegiada para o Convento.
+      </p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl shadow overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Moqueca capixaba" class="h-48 w-full object-cover">
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-amber-900">Roteiro Panelas de Barro</h3>
+            <p class="text-gray-700">Conheça cozinheiras tradicionais que mantêm viva a moqueca autêntica.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=700&q=80" alt="Mesa com doces" class="h-48 w-full object-cover">
+          <div class="p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-amber-900">Quitutes Romaria</h3>
+            <p class="text-gray-700">Feirantes oferecem doces conventuais, pão de coco e cafés aromáticos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="nav-duplicate">
+        <nav class="flex flex-wrap gap-4 text-sm font-semibold text-gray-700">
+          <a href="#home">Home</a>
+          <a href="#historia">História Viva</a>
+          <a href="#cultura">Expressões Culturais</a>
+          <a href="#fe">Fé & Romaria</a>
+          <a href="#contatos">Contatos</a>
+        </nav>
+      </div>
+    </section>
+
+    <section id="contatos" class="section-wrapper space-y-8">
+      <div class="flex items-center gap-4">
+        <div class="h-1 w-16 bg-amber-600"></div>
+        <p class="uppercase tracking-[0.3em] text-xs text-amber-600">Página 6</p>
+      </div>
+      <h2 class="text-3xl font-bold text-amber-900">Contatos & Participação</h2>
+      <p class="text-lg text-gray-700">Envie sugestões, relatos e fotos para enriquecer nosso blog colaborativo.</p>
+      <form class="bg-white rounded-2xl shadow p-6 grid gap-4">
+        <label class="flex flex-col text-sm font-semibold text-gray-700">
+          Nome
+          <input type="text" class="mt-1 border border-gray-300 rounded-lg px-3 py-2" placeholder="Seu nome">
+        </label>
+        <label class="flex flex-col text-sm font-semibold text-gray-700">
+          E-mail
+          <input type="email" class="mt-1 border border-gray-300 rounded-lg px-3 py-2" placeholder="voce@email.com">
+        </label>
+        <label class="flex flex-col text-sm font-semibold text-gray-700">
+          Mensagem
+          <textarea class="mt-1 border border-gray-300 rounded-lg px-3 py-2 h-28" placeholder="Conte-nos sua história"></textarea>
+        </label>
+        <button type="button" id="sendBtn" class="bg-amber-700 text-white font-semibold py-3 rounded-lg">Enviar mensagem</button>
+        <p id="feedback" class="text-sm text-amber-700 hidden">Mensagem enviada com carinho! Em breve entraremos em contato.</p>
+      </form>
+      <div class="nav-duplicate">
+        <nav class="flex flex-wrap gap-4 text-sm font-semibold text-gray-700">
+          <a href="#home">Home</a>
+          <a href="#historia">História Viva</a>
+          <a href="#cultura">Expressões Culturais</a>
+          <a href="#fe">Fé & Romaria</a>
+          <a href="#contatos">Contatos</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-amber-900 text-amber-50 py-8">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row gap-6 justify-between items-center">
+      <p>&copy; 2024 Blog Festa da Penha. Celebrando tradição, fé e cultura capixaba.</p>
+      <div class="flex gap-4 text-sm">
+        <a href="#home" class="underline">Voltar ao topo</a>
+        <a href="#contatos" class="underline">Fale conosco</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    menuToggle?.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    const activateLink = () => {
+      let current = '#home';
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          current = `#${section.id}`;
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === current);
+      });
+    };
+
+    document.addEventListener('scroll', activateLink);
+    activateLink();
+
+    const sendBtn = document.getElementById('sendBtn');
+    const feedback = document.getElementById('feedback');
+
+    sendBtn?.addEventListener('click', () => {
+      feedback.classList.remove('hidden');
+      feedback.classList.add('animate-pulse');
+      setTimeout(() => feedback.classList.remove('animate-pulse'), 1500);
+    });
+  </script>
+</body>
+</html>
